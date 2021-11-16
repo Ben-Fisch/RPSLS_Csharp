@@ -8,6 +8,9 @@ namespace RPSLS
 {
     public class Gameboard
     {
+        public string playerOne;
+        public string playerTwo;
+
         public void Run()
         {
             Welcome();
@@ -21,8 +24,13 @@ namespace RPSLS
 
         public void GameType()
         {
-            Console.WriteLine("Please choose a game type: Single Player (1) or Multiplayer(2)");
-           int gameType = Convert.ToInt32( Console.ReadLine());
+            Console.WriteLine("Please choose a game type: Single Player (1) or Multiplayer (2)");
+           string game = Console.ReadLine();
+            if(game == "1")
+            {
+                playerOne = new Player("Bill");
+
+            }
            
             
         }
